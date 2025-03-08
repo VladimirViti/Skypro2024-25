@@ -1,12 +1,15 @@
+import masks
+# Импорт функций для маски номера карты и счета
+
+
 def mask_account_card(number_catr: str) -> str:
     """ Функция, которая умеет обрабатывать информацию как о картах, так и о счетах """
-    mask_number = "Name card XXXX XX** **** XXXX"
-    account_mask = "Счет **xxxx"
-    number_1 = str(number_catr)
     if number_catr[-17] == " ":
-        return f"{number_1[0:-12]} {number_1[-12:-10]}{mask_number[-12:-4]} {number_1[-4:]}"
+        masks_number_card = str(masks.get_mask_card_number(number_catr))
+        return masks_number_card
     else:
-        return f"{account_mask[:-4]}{number_1[-4:]}"
+        account_mask = str(masks.get_mask_account(number_catr))
+        return account_mask
 
 
 def get_date(date: str) -> str:
