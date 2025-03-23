@@ -13,7 +13,8 @@ def get_mask_card_number(card_number: int) -> str:
 def get_mask_account(get_accout: int) -> str:
     """Функцию маскировки номера банковского счета"""
     get_accout_str = str(get_accout)
-    if len(get_accout_str) == 20 and get_accout_str.isdigit() == True:
+    get_bamber_accout_str = get_accout_str[5:]
+    if len(get_accout_str) >= 20 and get_bamber_accout_str.isdigit() == True:
         return f"{get_accout_str[:-20]}**{get_accout_str[-4:]}"
     else:
-        return "Номер счета состоит оз 20 цифрр. Вводите номер счета без пробелов и знаков припенания"
+        return "Номер счета состоит оз 20 цифрр. Вводите без пробелов и знаков припенания"
