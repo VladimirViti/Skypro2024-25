@@ -5,7 +5,7 @@ from src.masks import get_mask_card_number, get_mask_account
 
 def mask_account_card(number_catr: str) -> str:
     """Функция, которая умеет обрабатывать информацию как о картах, так и о счетах"""
-    if len(number_catr) <17:
+    if len(number_catr) < 17:
         return "Некоректые данные"
     if number_catr[-17] == " ":
         masks_number_card = str(get_mask_card_number(number_catr))
@@ -38,7 +38,7 @@ def get_date(date: str) -> str:
     year = date[0:4]
     month = date[5:7]
     day = date[8:10]
-    if year.isdigit() != True or month.isdigit() != True or day.isdigit() != True:
+    if not year.isdigit() or not month.isdigit() or not day.isdigit():
         return "Некоректые данные"
     else:
         return f'"{day}.{month}.{year}"'

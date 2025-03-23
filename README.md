@@ -50,3 +50,13 @@ def sort_by_date(list_dictionaries:list[dict], date: bool = True) -> list[dict]:
 ```
 ![Skypro](https://static.cashback.mts.ru/404m4loltfqymqx_lgo.png)
 
+
+## Тестирование
+
+
+### Добавленны файлы тестирования:
+1. Тест файла "masks"
+2. Тест файла "processing"
+3. Тест файла "wiget" 
+4. Также добавлен файл с фикстурами "confitest"
+
