@@ -1,5 +1,6 @@
-from src.widget import mask_account_card, get_date
 from typing import Any
+
+from src.widget import get_date, mask_account_card
 
 
 def test_mask_namber_card(card_number: str) -> Any:
